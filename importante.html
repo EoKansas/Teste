@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caneco ?</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="index.javascript">
+    <style> 
+        #myButton{
+            position: absolute;
+            top: 29%;
+            left: 50%;
+            transform: translate(-29%, -50%);
+           
+        }
+    </style>
+</head>
+<body>
+   <header>   
+        <h1>Caneco?</h1>
+        <a href="https://www.youtube.com/watch?v=sq_Fm7qfRQk"> <button>SIM</button></a> 
+        <button id="myButton" onclick="moverBotao()">NÃO</button>
+
+  <script>
+    function moverBotao() {
+      var button = document.getElementById("myButton");
+      var screenWidth = window.innerWidth;
+      var screenHeight = window.innerHeight;
+
+      var randomX = Math.floor(Math.random() * (screenWidth - 100));
+      var randomY = Math.floor(Math.random() * (screenHeight - 100));
+
+      button.style.left = randomX + "px";
+      button.style.top = randomY + "px";
+    }
+  </script>
+    </header>
+</body>
+</html>
